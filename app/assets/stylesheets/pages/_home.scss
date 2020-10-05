@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.viivan-gif {
+	height: 500px;
+	width: 500px;
+}
+.banner {
+	width: 100vw;
+    height: 100vh;
+    background-color: #f5ec6e;
+    justify-content: center;
+    display: flex;
+    padding-top: calc((100vh - 500px)/2);
+}
