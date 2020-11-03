@@ -1,0 +1,24 @@
+<%= content_for :new_form do %>
+				<%= simple_form_for @suggestion, url: suggestions_create_path do |f| %>
+			      <div class="form-inputs">
+			        <%= f.label :name_owner, 'Qui êtes vous ?'%>
+			        <%= f.input :name_owner, required: true, placeholder: 'Nom complet', label: false%>
+			        <%= f.input :email_owner, required: true, placeholder: 'Email ou numéro de téléphone', label: false %>
+			        <br>
+			        <%= f.label :name_contact, 'Un contact, lieu à nous proposer ?', label: false%>
+			        <%= f.input :name_contact, required: true, placeholder: 'Nom complet du contact / lieu', label: false%>
+			        <%= f.input :address, required: true, placeholder: 'Numéro + rue', label: false  %>
+			        <%= f.input :code_postal, required: true, placeholder: 'Code postal', label: false  %>
+			        <%= f.input :ville, required: true, placeholder: 'Ville', label: false  %>
+			        <%= f.input :email, required: true, placeholder: 'Email', label: false  %>
+			        <%= f.input :phone_number, required: true, placeholder: 'Numéro de téléphone', label: false  %>
+			        <%= f.input :description, required: true, placeholder: 'description', label: false  %>
+			        <%= f.select(:category, :prompt => 'Select') %><br>
+			      </div>
+
+			      <div class="form-actions">
+			        <%= f.button :submit, "Valider", class: "btn btn-primary full-width" %>
+			      </div>
+
+			    <% end %>
+<% end %>

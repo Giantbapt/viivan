@@ -1,0 +1,32 @@
+<%= content_for :new_form do %>
+				<%= simple_form_for @suggestion, url: suggestions_create_path do |f| %>
+				<div class="container">
+					<h1>Ajouter une suggestion</h1>
+					<p>Vous pouvez ici nous proposer vos lieux préférés, perles rares, découvertes, mais aussi vos contacts insolites, et/ou contacts qui selon vous nous permettront d'en apprendre toujours plus sur la vie :) <br> Nous gardons toutes les infos de contact pour nous et indiquerons juste la ville du lieu sur une carte accessible à tous ! </p>
+			      <br><div class="form-inputs">
+			        <%= f.label :name_owner, 'Qui êtes vous ?'%>
+			        <%= f.input :name_owner, required: true, placeholder: 'Nom complet', label: false%>
+			        <%= f.input :email_owner, required: true, placeholder: 'Email ou numéro de téléphone', label: false %>
+			        <br>
+			        <%= f.label :name_contact, 'Un contact, lieu à nous proposer ?', label: false%>
+			        <%= f.input :name_contact, required: true, placeholder: 'Nom complet du contact / lieu', label: false%>
+			        <%= f.input :address, required: true, placeholder: 'Numéro + rue', label: false  %>
+			        <%= f.input :code_postal, required: true, placeholder: 'Code postal', label: false  %>
+			        <%= f.input :ville, required: true, placeholder: 'Ville', label: false  %>
+			        <%= f.input :email, required: true, placeholder: 'Email', label: false  %>
+			        <%= f.input :phone_number, required: true, placeholder: 'Numéro de téléphone', label: false  %>
+			        <%= f.input :description, required: true, placeholder: 'Description', label: false  %>
+			        <%= f.input :category, :as => :select, :prompt => 'Catégorie', collection: ['Sport', 'Ferme', 'Arts', 'Artisanat', 'Insolite', 'Culture', 'Nature'], label: false %><br>
+			      </div>
+
+			      <div class="form-actions offset-4 col-4">
+			        <%= f.button :submit, "Valider", class: "btn btn-primary full-width col-12" %>
+			      </div>
+
+			    <% end %>
+			    <div class="d-flex justify-content-center">
+					<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1LVmNtCqxSiL7es9bs7-lMSlWa-WM3dZI" width="450" height="380"></iframe>
+			    	
+			    </div>	
+				</div>
+<% end %>

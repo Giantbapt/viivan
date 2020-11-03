@@ -1,25 +1,136 @@
 <div class="banner">
-	<div class="content-banner">
-		<%= image_tag("viivan.gif", :class => "viivan-gif") %>
+	<div class="content-banner active" id="banner">
+		<%= image_tag("viivan.gif", :class => "viivan-gif", :id => 'viivan-gif') %>		
+	</div>
+
+	<div class="container" id="container">
+		
+		<div class="titre justify-center">
+			<h1>SUR LA ROUTE</h1>
+			<h2>À la rencontre de la France, des vivants et du vivant.</h2>
+		</div>
+		<div class="explications">
+			<p>Fraîchement diplômés, Céline de Sciences Sociales et Baptiste en Management de l'Innovation, nous avons décidé de partir à l'avanture en essayant un nouveau moyen de transport : le van aménagé. Camping-car mieux looké, celui-ci a l'avantage de passer un peu plus inaperçu, et d'attirer la sympathie des gens rencontrés. Nous avons ainsi choisi d'embarquer à bord du petit Elvis : 3,5 tonnes, 4m de long et 2,8m de haut. 
+		<br>
+			Nous souhaitons découvrir un mode de vie plus simple, itinérant, supprimant autant que possible le superflu que nous avons eu l'habitude d'accumuler dans notre quotidien. L'objectif étant de retrouver du confort avec le minimum.  <br><br><strong>Pas de chauffage. Pas d'eau chaude. Pas de douches. Pas de toilettes. 10 euros par jour par personne. </strong>
+		<br><br>
+	        Sortir de notre zone de confort c'est aussi provoquer la rencontre avec les individus qui vont se trouver sur notre chemin et apprendre un maximum de nouvelles choses sur le monde qui nous entoure, le monde vivant. 
+
+	        Avancer, découvrir, s'émerveiller, rencontrer, apprendre, c'est ce que l'on s'apprête à vivre durant les prochains mois avec Elvis ! 
+		</div>
+		<div class="suivez-nous">
+			<h3>Suivez-nous !</h3>
+			<div class="row">
+				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZRhiosmTJX9BQw91Dj4vNBUC9HIMfG_n" width="640" height="480" class="col-9"></iframe>
+				<p class="col-3">Vous trouverez ici toutes les étapes où nous avons dormi jour après-jour. Il vous suffit de cliquer sur une position épinglée pour y trouver un petit résumé et une photo.</p>
+				
+			</div>
+		</div>
+		<div class="suggestions">
+			<h3>Des Suggestions ?</h3>
+
+						<p>Vous pouvez ici nous proposer vos lieux préférés, perles rares, découvertes, mais aussi vos contacts insolites, et/ou contacts qui selon vous nous permettront d'en apprendre toujours plus sur la vie :) <br> Nous gardons toutes les infos de contact pour nous et indiquerons juste la ville du lieu sur une carte accessible à tous ! </p>
+			<div class="row">
+				<div class="col-8 d-flex justify-content-center">
+						<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1LVmNtCqxSiL7es9bs7-lMSlWa-WM3dZI" width="550" height="500" style="margin-top: 90px;"></iframe>
+				</div>
+				<div class="col-4">
+					
+					<%= simple_form_for @suggestion, url: suggestions_create_path, class: 'col-3' do |f| %>
+				      <div class="form-inputs">
+				        <h3>Qui êtes vous ?</h3>
+				        <%= f.input :name_owner, required: true, placeholder: 'Nom complet', label: false%>
+				        <%= f.input :email_owner, required: true, placeholder: 'Email ou numéro de téléphone', label: false %>
+				        <br>
+				        <h3>Un contact, lieu à nous proposer ?</h3>
+				        <%= f.input :name_contact, required: true, placeholder: 'Nom complet du contact / lieu', label: false%>
+				        <%= f.input :address, required: true, placeholder: 'Numéro + rue', label: false  %>
+				        <%= f.input :code_postal, required: true, placeholder: 'Code postal', label: false  %>
+				        <%= f.input :ville, required: true, placeholder: 'Ville', label: false  %>
+				        <%= f.input :email, required: true, placeholder: 'Email', label: false  %>
+				        <%= f.input :phone_number, required: true, placeholder: 'Numéro de téléphone', label: false  %>
+				        <%= f.input :description, required: true, placeholder: 'Description', label: false  %>
+				        <%= f.input :category, :as => :select, :prompt => 'Catégorie', collection: ['Sport', 'Ferme', 'Arts', 'Artisanat', 'Insolite', 'Culture', 'Nature'], label: false %><br>
+				      </div>
+
+				      <div class="form-actions offset-4 col-4">
+				        <%= f.button :submit, "Valider", class: "btn btn-primary full-width col-12" %>
+				      </div>
+
+				    <% end %>
+				    
+				</div>
+				
+				<!-- <form class=" col-6" action="">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Qui êtes vous? </label>
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom + prénom">
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Un contact / lieu à nous proposer? </label>
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom complet du contact / du lieu">
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adresse (numéro + rue)">
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code postal">
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ville">
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Numéro de téléphone">
+	    				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description / Commentaire">
+					</div>
+					<label for="exampleInputEmail1">Quelle catégorie ?</label>
+					<select class="custom-select">
+					  <option selected>Catégorie</option>
+					  <option value="1">Sport</option>
+					  <option value="2">Ferme / Agriculture</option>
+					  <option value="3">Arts</option>
+					  <option value="4">Insolite</option>
+					  <option value="4">Artisanant</option>
+					  <option value="4">Culture</option>
+					  <option value="4">Nature</option>
+					</select>
+					<div class="d-flex justify-content-center">
+						<div class="btn btn-danger">Valider</div>
+						
+					</div>
+				</form> -->
+			</div>
+
+
+		</div>
+		<div class="banner-articles">
+			<h3>Nos articles</h3>
+			<p>Nous écrivons des articles racontant des anecdotes de notre périple, moments forts qui nous auront marqué l'esprit, pour les partager avec nos proches et tous les curieux qui le souhaitent. Aussi une manière de créer un carnet de voyage virtuel et de garder une trace de notre aventure. </p> 
+			<div class="articles">
+				<div class="article">
+					<div class="article-titre">
+						<h2>19 octobre 2020 : On est enfin partis : direction l'océan !</h2>
+					</div>
+					
+					<div class="content-photo">
+						<%= image_tag("depart_van.jpg", :class => "photo-article") %>
+					</div>
+				</div>
+			</div>	
+		</div> 
+		<div class="galerie">
+			<h3>Découvrez nos photos !</h3>
+		</div>
+			<div class="team">
+				<h3>Qui sommes-nous? </h3>
+				<div class="baptiste">
+					<h4>Baptiste Chebassier</h4>
+					<p></p>
+					<div class="avatar"></div>
+				</div>
+				<div class="celine">
+					<h4>Céline Devinoy</h4>
+					<p></p>
+					<div class="avatar">
+						
+					</div>
+				</div>
+			</div>
 		
 	</div>
-	<div class="titre justify-center">
-		<h1>SUR LA ROUTE DU VIVANT</h1>
-	</div>
+
 </div>
-<div class="banner-articles">
-
-	<div class="article">
-		<div class="article-titre">
-			<h2>19 octobre 2020 : On est enfin partis : direction l'océan !</h2>
-		</div>
-		
-		<div class="content-photo">
-			<%= image_tag("depart_van.jpg", :class => "photo-article") %>
-		</div>
-
-
-	</div>
-	
-</div> 
-

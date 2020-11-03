@@ -5,23 +5,31 @@
 }
 .banner {
 	width: 100vw;
-    height: 100vh;
+
     background-color: #f5ec6e;
     // justify-content: center;
     // display: flex;
-    padding-top: calc((100vh - 600px)/2);
+    padding-top: calc((100vh - 500px)/2);
 }
 .content-banner {
 	width: 100vw;
+	height: 100vh;
+	top: 0px;
 	background-color: #f5ec6e;
     justify-content: center;
     display: flex;
+    z-index: 3;
 }
 h1 {
 	text-align: center;
 	font-weight: 300;
     margin-top: 30px;
 }
+// .active {
+
+// 	visibility: hidden;
+// 	height: 0px;
+// }
 
 .content-photo {
 	justify-content: center;
@@ -45,9 +53,53 @@ h1 {
     text-align: center;
 }
 .banner-articles {
-	width: 100vw;
-    background-color: #f5ec6e;
-    justify-content: center;
-    display: flex;
-    padding: 30px;
+	margin-top: 60px;
 }
+.suivez-nous {
+	margin-top: 60px;
+	.col-9 {
+	padding: 0px;
+  }
+}
+
+.suivez-nous p {
+		padding-left: 10px;
+		vertical-align: middle;
+		text-align: justify;
+		padding-top: 160px;
+
+		
+}
+
+.suggestions {
+	margin-top: 60px;
+}
+
+h1, h2, h3 {
+	font-family: 'Luckiest Guy';
+	color:  #090935;
+}
+p {
+	 color: #090935;
+	 font-size: 18px;
+}
+h1 {
+	font-size: 60px;
+	margin: 20px;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	font-size: 40px;
+}
+.btn-danger {
+	margin: 10px;
+}
+
+.galerie {
+	margin-top: 60px;
+}
+

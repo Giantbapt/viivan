@@ -1,0 +1,17 @@
+<%= @suggestions.each do |suggestion| %>
+	<div class="suggestion">
+		<p>
+		Nom du copain :<%= suggestion.name_owner %> <br>
+		Email du copain :<%= suggestion.email_owner %> <br>
+		La suggestion : <br>
+		Nom : <%= suggestion.name_contact %> <br>
+		Adresse :<%= suggestion.address %> <br>
+		Code Postal :<%= suggestion.code_postal %> <br>
+		Ville :<%= suggestion.ville %> <br>
+		Email :<%= suggestion.email %> <br>
+		Numéro de téléphone :<%= suggestion.phone_number %> <br>
+		Description :<%= suggestion.description %> <br>
+		Catégorie :<%= suggestion.category %> <br>
+	</p>
+	</div>
+<% end %>
