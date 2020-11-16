@@ -1,0 +1,15 @@
+
+.dashboard-suggestions {
+	background-color: $yellow;
+	padding: 10px;
+}
+
+.dash-suggestion {
+	background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 6px 6px rgba(9, 9, 53, 0.25);
+    p {
+    	opacity: 0.8;
+    }
+}

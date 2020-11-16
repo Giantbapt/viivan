@@ -1,0 +1,31 @@
+<div class="banner-dashboard">
+	<h1>Dashboard Admin</h1>
+	<div class="dashboard-suggestions">
+		<h2>Suggestions</h2>
+		<% @suggestions.each do |suggestion| %>
+		<div class="dash-suggestion col-md-4">
+			<h3 class="text-center"><%= suggestion.ville %></h3>
+			<div class="dash-owner">
+				<p>Par : <%= suggestion.name_owner %></p>
+			 	<p>Email : <%= suggestion.email_owner %></p>
+			</div>
+			<br>
+			<div class="dash-contact">
+				<h4>Contact</h4>
+				<p> Nom du contact : <br><%= suggestion.name_contact %> </p>
+				<p> Adresse : <br> <%= suggestion.address %> </p>
+				<p> Ville : <br> <%= suggestion.ville %> </p>
+				<p> Code Postal : <br> <%= suggestion.code_postal %> </p>
+				<p> Numéro de tel : <br> <%= suggestion.phone_number %> </p>
+				<p> Email : <br> <%= suggestion.email %> </p>
+				<p> Description : <br> <%= suggestion.description %> </p>
+				<p> Categorie : <br> <%= suggestion.category %> </p>
+				
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<div class="dashboard-articles">
+		
+	</div>
+</div>

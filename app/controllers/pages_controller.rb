@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   	    @suggestion = Suggestion.new
 
   end
+  def dashboard
+  	@suggestions = Suggestion.all
+  	@articles = Article.all
+  end
 end

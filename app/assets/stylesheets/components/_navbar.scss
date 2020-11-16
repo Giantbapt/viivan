@@ -2,15 +2,14 @@
 #navbar {
   overflow: hidden;
   background-color: $yellow;
-  position: fixed; /* Sticky/fixed navbar */
   width: 100%;
   top: 0; /* At the top */
   z-index: -1;
   height: 90px;
   padding:5px;
-  position: relative;
+  
   top: 0px;
-  position: sticky !important;
+  // position: sticky !important;
   box-shadow: 0 1px rgba(9, 9, 53, 0.25);
 
 
