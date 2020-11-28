@@ -7,8 +7,15 @@ class SuggestionsController < ApplicationController
 
   def create
   	@suggestion = Suggestion.new(suggestion_params)
-    @suggestion.save!
-    redirect_to root_path
+    if @suggestion.save
+      redirect_to root_path(anchor: "suggestions")
+    else 
+      render :new
+    end
+    # respond_to do |format|
+    #   format.js { flash[:notice] = "Created order" } 
+    # end
+
   end
 
   def show

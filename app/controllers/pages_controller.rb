@@ -5,6 +5,16 @@ class PagesController < ApplicationController
   	    @suggestion = Suggestion.new
 
   end
+
+  def galerie
+
+  		results = Cloudinary::Api.resources_by_tag("Viivan", max_results: 100)
+  		jon = results.first[1]
+  		@cloudinary_viivan_images = jon
+  		
+
+
+  end
   def dashboard
   	@suggestions = Suggestion.all
   	@articles = Article.all

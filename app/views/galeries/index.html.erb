@@ -1,0 +1,23 @@
+<div class="banner-galerie">
+	<div class="container">
+		<div class="grid">
+		 	
+<!-- 			<#% @cloudinary_viivan_images.each do |image| %>
+				<#%= link_to image["url"] do %>
+					<#%= image_tag(image["url"], class: "image-galerie") %>
+					
+				<#%end%>
+			<#%	end %> -->
+		<% jon = Galerie.all %>
+		<% jon.each do |image| %>
+			<%= link_to galery_path(image) do %>
+					<%= image_tag(image["url"], class: "image-galerie") %>
+					
+				<%end%>
+		<% end %>
+
+		</div>
+		
+	</div>
+	
+</div>

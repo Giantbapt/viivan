@@ -1,5 +1,5 @@
 <%= content_for :new_form do %>
-				<%= simple_form_for @suggestion, url: suggestions_create_path do |f| %>
+				<%= simple_form_for @suggestion, url: suggestions_create_path, remote: true do |f| %>
 				<div class="container">
 					<h1>Ajouter une suggestion</h1>
 					<p>Vous pouvez ici nous proposer vos lieux préférés, perles rares, découvertes, mais aussi vos contacts insolites, et/ou contacts qui selon vous nous permettront d'en apprendre toujours plus sur la vie :) <br> Nous gardons toutes les infos de contact pour nous et indiquerons juste la ville du lieu sur une carte accessible à tous ! </p>
@@ -20,7 +20,7 @@
 			      </div>
 
 			      <div class="form-actions offset-4 col-4">
-			        <%= f.button :submit, "Valider", class: "btn btn-primary full-width col-12" %>
+			        <%= f.button :submit, "Valider", class: "btn btn-primary submit-new-suggestion full-width col-12" %>
 			      </div>
 
 			    <% end %>

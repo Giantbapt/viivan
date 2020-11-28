@@ -12,6 +12,7 @@
     padding-top: calc((100vh - 500px)/2);
     top: 0px;
     position: absolute;
+    z-index: 3;
 }
 .content-banner {
 	width: 100vw;
@@ -20,7 +21,6 @@
 	background-color: #f5ec6e;
     justify-content: center;
     display: flex;
-    z-index: 3;
 }
 h1 {
 	text-align: center;
@@ -33,30 +33,7 @@ h1 {
 // 	height: 0px;
 // }
 
-.content-photo {
-	justify-content: center;
-    display: flex;
-    margin-top: 10px;
-}
-.photo-article {
 
-	width: 500px;
-}
-.article {
-	padding: 30px;
-	width: 600px;
-	background-color: white;
-	border-radius: 10px;
-}
-.article-titre h2 {
-	font-weight: 900;
-    // margin: 20px;
-    font-size: 20px;
-    text-align: center;
-}
-.banner-articles {
-	margin-top: 60px;
-}
 .suivez-nous {
 	margin-top: 60px;
 	.col-9 {
@@ -105,3 +82,8 @@ h3 {
 	margin-top: 60px;
 }
 
+h1, h3 {
+	span {
+		box-shadow: inset 0px -25px white;
+	}
+}

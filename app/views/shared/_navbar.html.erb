@@ -19,12 +19,12 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav">
 			<!-- <div class="nav-item"><a href="#demarche"> La démarche</a></div> -->
-			<div class="nav-item"><%= link_to "Suivez-nous", root_path %></div>
-			<div class="nav-item"><%= link_to "Suggestions" %></div>
-			<div class="nav-item"><%= link_to "Gallerie" %></div>
-			<div class="nav-item"><%= link_to "Blog" %></div>
-			<div class="nav-item"><a target="_blank" href="mailto:baptiste.chebassier@contributioncarbone.fr, ">Contactez-nous !</a></div>
+			<%= link_to "Suivez-nous !", root_path(anchor: 'suivez-nous'), class: 'nav-item' %>
+			<%= link_to "Vos suggestions", root_path(anchor: 'suggestions'), class: 'nav-item'  %>
+			<%= link_to "Galerie", galeries_path , class: 'nav-item' %>
+			<%= link_to "Nos petites histoires", articles_path, class: 'nav-item'%>
+
 			<!-- <div class="nav-item"><a href="#team">L'équipe</a></div> -->
 		</ul>
 	</div>
-</div>
+</div>	
