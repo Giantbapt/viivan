@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/404', to: "errors#not_found"
+  get '/422', to: "errors#unacceptable"
+  get '/500', to: "errors#internal_error"
   resources :articles, only: [:new,:index, :show]
   resources :galeries, only: [:index, :show]
   # get 'articles/new'
@@ -14,5 +17,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'pages#dashboard', as: :dashboard
   get 'galerie', to: 'pages#galerie', as: :galerie
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

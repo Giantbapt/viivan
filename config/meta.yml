@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Viivan"
+meta_title: "Viivan, par Céline et Baptiste"
+meta_description: "Le voyage de Céline, Baptiste et leur van Elvis à travers la France pour redécouvrir notre beau pays !"
+meta_image: "viivan.gif" # should exist in `app/assets/images/`
+twitter_account: ""   # required for Twitter Cards

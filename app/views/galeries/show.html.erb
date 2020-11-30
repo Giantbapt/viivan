@@ -4,16 +4,16 @@
 			<div class="left-arrow arrow">
 				<% if @galerie[:id] > 0  %>
 					<%= link_to " < ",galery_path(params[:id].to_i - 1)%>
-				<% end %> 
+				<% end %>
 			</div>
 
-			<a href="/" ></a>
+			<%= link_to "", galeries_path %>
 		</div>
 		<div class="image">
 			<%= image_tag(@galerie[:url], class: "image-show") %>
 		</div>
 			<!-- <div class="infos-show">
-				
+
 				<div class='infos-show-content'>
 					<div class="number col-3 align-middle"> <p> <%#=@galerie.numéro %></p>
 					</div>
@@ -28,7 +28,7 @@
 				</div>
 			</div>		 -->
 		<div class="right-show">
-			<a href="/" ></a>
+			<%= link_to "",galeries_path %>
 			<div class="right-arrow arrow">
 				<% last = Galerie.count - 1 %>
 				<% if @galerie[:id] = last %>
@@ -43,6 +43,6 @@
 				<#% end %>  -->
 			</div>
 		</div>
-	
+
 	</div>
 </div>

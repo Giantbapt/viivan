@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  skip_before_action :authenticate_user!
   def new
   	@article = Article.new
   end
@@ -6,7 +7,7 @@ class ArticlesController < ApplicationController
   def create
   	@article = Article.new(article_params)
     @article.save!
-    redirect_to root_path
+    redirect_to root_path, notice:"Nous avons bien reçu votre suggestion, merci pour votre aide !"
   end
 
   def index
@@ -15,7 +16,7 @@ class ArticlesController < ApplicationController
 
   def show
   	@article = Article.find(params[:id])
-  	
+
   end
 
 

@@ -42,7 +42,7 @@
     text-align: center;
 }
 .banner-articles-index {
-	padding-top: 60px;
+	padding-top: 100px;
 	padding-bottom: 60px;
 	background-color: white;
 	h1, h3 {
@@ -53,6 +53,29 @@
 
 }
 
+.banner-articles{
+	padding-top: 20px;
+}
+.article-text {
+	color: $blue;
+	li {
+		font-size: 18px;
+	}
+}
+.banner-show {
+	background-color: white;
+	padding-bottom: 30px;
+}
+.image-show {
+
+}
+
+.image-article-show {
+    width: 100vw;
+    height: 400px;
+    -o-object-fit: contain;
+    object-fit: cover;
+}
 
 @media (max-width: 500px) {
 	.articles {
@@ -71,13 +94,13 @@
 	.articles {
 		grid-template-columns: 1fr;
 	}
-   
+
  }
 @media (min-width: 998px) and (max-width: 1200px) {
 	.articles {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-    
+
 }
 
 @media (min-width: 1200px) {

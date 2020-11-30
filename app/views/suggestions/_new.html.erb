@@ -1,5 +1,5 @@
 <%= content_for :new_form do %>
-				<%= simple_form_for @suggestion, url: suggestions_create_path do |f| %>
+				<%= simple_form_for(@suggestion, url: suggestions_create_path, remote: true) do |f| %>
 			      <div class="form-inputs">
 			        <%= f.label :name_owner, 'Qui êtes vous ?'%>
 			        <%= f.input :name_owner, required: true, placeholder: 'Nom complet', label: false%>

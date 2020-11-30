@@ -1,0 +1,70 @@
+.btn-wrapper {
+	display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #090935;
+    border-color: #090935;
+    /* box-shadow: 5px 7px rgb(185 185 185 / 10%); */
+    box-shadow: white;
+    box-shadow: 1px 2px 7px grey;
+    border-radius: 43px;
+
+    width: 250px;
+    /* height: 50px; */
+    padding: 20px;
+    /* display: flex; */
+    /* text-align: center; */
+    align-content: center;
+    text-align: center;
+
+    p {
+    	color: white;
+    	margin-top: 10px;
+    }
+}
+
+.btn-blue:hover {
+	border: 1px solid $blue;
+	background-color: white;
+	cursor: pointer;
+	p {
+		color: $blue;
+	}
+}
+.btn-white {
+    color: $blue;
+    background-color: white;
+    border-color: #090935;
+    /* box-shadow: 5px 7px rgb(185 185 185 / 10%); */
+    box-shadow: white;
+    box-shadow: 1px 2px 7px grey;
+    border-radius: 43px;
+
+    width: 250px;
+    /* height: 50px; */
+    padding: 20px;
+    /* display: flex; */
+    /* text-align: center; */
+    align-content: center;
+    text-align: center;
+
+    p {
+      color: white;
+      margin-top: 10px;
+    }
+}
+
+.btn-white:hover {
+  border: 1px solid $yellow;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 1px 2px 7px $yellow;
+  p {
+    color: $blue;
+  }
+}
+

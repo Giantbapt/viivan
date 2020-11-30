@@ -1,6 +1,14 @@
 .alert {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  z-index: 1000;
+    position: fixed;
+    top: 100px;
+    right: 16px;
+    z-index: 1000;
+    width: 90%;
+}
+
+.alert-info {
+    /* top: 90px; */
+    color: white;
+    background-color: #090935;
+    border-color: #fcfad6;
 }

@@ -1,29 +1,30 @@
-<div class="banner" id="banner">
+
+<div class="banner banner-absolute" id="banner">
 	<div class="content-banner active" >
-		<%= image_tag("viivan.gif", :class => "viivan-gif", :id => 'viivan-gif') %>		
+		<%= image_tag("viivan.gif", :class => "viivan-gif", :id => 'viivan-gif') %>
 	</div>
 
 	<div class="container" id="container">
-		
+
 		<div class="titre justify-center">
 			<h1><span>SUR LA ROUTE</span></h1>
 			<h2>À la rencontre de la France, des vivants et du vivant.</h2>
 		</div>
 		<div class="explications">
-			<p>Fraîchement diplômés, Céline de Sciences Sociales et Baptiste en Management de l'Innovation, nous avons décidé de partir à l'avanture en essayant un nouveau moyen de transport : le van aménagé. Camping-car mieux looké, celui-ci a l'avantage de passer un peu plus inaperçu, et d'attirer la sympathie des gens rencontrés. Nous avons ainsi choisi d'embarquer à bord du petit Elvis : 3,5 tonnes, 4m de long et 2,8m de haut. 
+			<p>Fraîchement diplômés, Céline de Sciences Sociales et Baptiste en Management de l'Innovation, nous avons décidé de partir à l'avanture en essayant un nouveau moyen de transport : le van aménagé. Camping-car mieux looké, celui-ci a l'avantage de passer un peu plus inaperçu, et d'attirer la sympathie des gens rencontrés. Nous avons ainsi choisi d'embarquer à bord du petit Elvis : 3,5 tonnes, 4m de long et 2,8m de haut.
 		<br>
 			Nous souhaitons découvrir un mode de vie plus simple, itinérant, supprimant autant que possible le superflu que nous avons eu l'habitude d'accumuler dans notre quotidien. L'objectif étant de retrouver du confort avec le minimum.  <br><br><strong>Pas de chauffage. Pas d'eau chaude. Pas de douches. Pas de toilettes. 10 euros par jour par personne. </strong>
 		<br><br>
-	        Sortir de notre zone de confort c'est aussi provoquer la rencontre avec les individus qui vont se trouver sur notre chemin et apprendre un maximum de nouvelles choses sur le monde qui nous entoure, le monde vivant. 
+	        Sortir de notre zone de confort c'est aussi provoquer la rencontre avec les individus qui vont se trouver sur notre chemin et apprendre un maximum de nouvelles choses sur le monde qui nous entoure, le monde vivant.
 
-	        Avancer, découvrir, s'émerveiller, rencontrer, apprendre, c'est ce que l'on s'apprête à vivre durant les prochains mois avec Elvis ! 
+	        Avancer, découvrir, s'émerveiller, rencontrer, apprendre, c'est ce que l'on s'apprête à vivre durant les prochains mois avec Elvis !
 		</div>
 		<div class="suivez-nous" id="suivez-nous">
 			<h3><span>Suivez-nous !</span></h3>
 			<div class="row">
-				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZRhiosmTJX9BQw91Dj4vNBUC9HIMfG_n" width="640" height="480" class="col-9"></iframe>
-				<p class="col-3">Vous trouverez ici toutes les étapes où nous avons dormi jour après-jour. Il vous suffit de cliquer sur une position épinglée pour y trouver un petit résumé et une photo.</p>
-				
+				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZRhiosmTJX9BQw91Dj4vNBUC9HIMfG_n" width="640" height="480" class="col-md-9"></iframe>
+				<p class="col-md-3">Vous trouverez ici toutes les étapes où nous avons dormi jour après-jour. Il vous suffit de cliquer sur une position épinglée pour y trouver un petit résumé et une photo.</p>
+
 			</div>
 		</div>
 		<div class="suggestions" id="suggestions">
@@ -31,11 +32,11 @@
 
 						<p>Vous pouvez ici nous proposer vos lieux préférés, perles rares, découvertes, mais aussi vos contacts insolites, et/ou contacts qui selon vous nous permettront d'en apprendre toujours plus sur la vie :) <br> Nous gardons toutes les infos de contact pour nous et indiquerons juste la ville du lieu sur une carte accessible à tous ! </p>
 			<div class="row">
-				<div class="col-8 d-flex justify-content-center">
+				<div class="col-md-8 d-flex justify-content-center">
 						<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1LVmNtCqxSiL7es9bs7-lMSlWa-WM3dZI" width="550" height="500" style="margin-top: 90px;"></iframe>
 				</div>
-				<div class="col-4">
-					
+				<div class="col-md-4">
+
 					<%= simple_form_for @suggestion, url: suggestions_create_path, class: 'col-3' do |f| %>
 				      <div class="form-inputs">
 				        <h3>Qui êtes vous ?</h3>
@@ -53,52 +54,90 @@
 				        <%= f.input :category, :as => :select, :prompt => 'Catégorie', collection: ['Sport', 'Ferme', 'Arts', 'Artisanat', 'Insolite', 'Culture', 'Nature'], label: false %><br>
 				      </div>
 
-				      <div class="form-actions offset-4 col-4">
+				      <div class="form-actions offset-sm-1 col-sm-10 offset-md-2 col-md-8">
 				        <%= f.button :submit, "Valider", class: "btn btn-primary full-width col-12" %>
 				      </div>
 
 				    <% end %>
-				    
+
 				</div>
 			</div>
 
 
 		</div>
 		<div class="banner-articles">
-			<h3><span>Nos articles</span></h3>
-			<p>Nous écrivons des articles racontant des anecdotes de notre périple, moments forts qui nous auront marqué l'esprit, pour les partager avec nos proches et tous les curieux qui le souhaitent. Aussi une manière de créer un carnet de voyage virtuel et de garder une trace de notre aventure. </p> 
+			<h3><span>Nos derniers articles</span></h3>
+			<p>Nous écrivons des articles racontant des anecdotes de notre périple, moments forts qui nous auront marqué l'esprit, pour les partager avec nos proches et tous les curieux qui le souhaitent. Aussi une manière de créer un carnet de voyage virtuel et de garder une trace de notre aventure. </p>
 			<div class="articles" id="articles">
-				
-				<div class="article">
-					<div class="article-titre">
-						<h2>19 octobre 2020 : On est enfin partis : direction l'océan !</h2>
-					</div>
-					
+				<% @last_articles.each do |article| %>
+				<%= link_to(article_path(article), class: 'article') do |f| %>
+
 					<div class="content-photo">
 						<%= image_tag("depart_van.jpg", :class => "photo-article") %>
 					</div>
-				</div>
-			</div>	
-		</div> 
+					<div class="article-titre">
+						<h2><span>	<%= article.title %></span></h2>
+						<p><%= article.meta_description %> </p>
+					</div>
+
+					<% end %>
+				<% end %>
+			</div>
+			<div class="btn-wrapper">
+				<%= link_to "Voir tous les articles", articles_url, class:('btn-blue') %>
+			</div>
+		</div>
 		<div class="galerie" id="galerie">
-			<h3><span>Découvrez nos photos !</span></h3>
+			<h3><span>Découvrez nos dernières photos !</span></h3>
+			<div class="grid">
+				<% @last_images.each do |image| %>
+
+					<%= link_to galery_path(image) do %>
+						<%= image_tag(image["url"], class: "image-galerie") %>
+
+					<%end%>
+				<% end %>
+			</div>
+			<div class="btn-wrapper">
+				<%= link_to "Voir toutes les photos", galeries_url, class:('btn-blue') %>
+			</div>
+
+
+
 		</div>
-		<div class="team">
+		<div class="banner-team">
 			<h3><span>Qui sommes-nous?</span> </h3>
-			<div class="baptiste">
-				<h4>Baptiste Chebassier</h4>
-				<p></p>
-				<div class="avatar"></div>
-			</div>
-			<div class="celine">
-				<h4>Céline Devinoy</h4>
-				<p></p>
-				<div class="avatar">
-					img
+			<p>Céline et Baptiste, nous avons 23 et 24 ans et avons décidé de partir voyager en France après nos études pour découvrir le plus beau pays du monde : le nôtre. </p>
+			<div class="row">
+				<div class="baptiste member col-md-6">
+					<div class="image-team">
+
+						<%= cl_image_tag("Viivan/BaptFichier_10.png") %>
+					</div>
+					<h4>Baptiste Chebassier</h4>
+					<p>Je suis un doux rêveur, qui a des milliers de projets (dans ma tête) et j'essaye d'en concrétiser quelques uns. Malgré que je dois toujours avoir un avis différent, je suis toujours partant pour apprendre le plus possible et partir à l'aventure ! J'ai d'autant plus la chance de partager celle-ci avec la merveilleuse <strong>❤ Céline ❤ </strong>. <br> Je suis de plus en plus persuadé qu'il faut faire ce qu'on veut faire quand on veut le faire et ne pas chercher plus compliqué ! <br>Une citation ? <br><strong>"On ne repousse pas ses limites, on les découvre"</strong>, <i>Jean-Louis Etienne</i> </p>
 				</div>
+				<div class="celine member col-md-6">
+					<div class="image-team">
+						<%= cl_image_tag("Viivan/image-removebg-preview_21.png") %>
+					</div>
+					<h4>Céline Devinoy</h4>
+					<p>J'ai pas l’air comme ça, mais je suis de nature enthousiaste, surtout quand il s’agit de partir en voyage et de produire tout effort physique imaginable, tout en apprenant et en rencontrant.
+Partir à l’aventure avec le <strong>beau Baptiste</strong>, c’est pratique parce qu’il rattrape toutes mes maladresses, mais c’est surtout que du bonheur et de l’amour au quotidien !
+<br>Passionnée de couchers de soleil et de paysages plein de couleurs, je m’émerveille rapidement de chaque recoin de notre France...</p>
+				</div>
+				<div class="elvis member offset-md-3 col-md-6">
+					<div class="image-team">
+						<%= cl_image_tag("Viivan/image-removebg-preview_22.png") %>
+					</div>
+					<h4>Elvis</h4>
+					<p>30 ans, 240 000kms, moteur diesel, 3t5, 4m de long et 2,8m de haut ! J'ai beaucoup de chance d'être piloté par Céline et Baptiste qui prennent bien soin de moi et me font voir les plus beaux paysages ! Depuis que je suis avec eux j'ai été rénové, repeint, briqué on a changé ma courroie, <strong>bref je suis chouchouté quelle chance !</strong></p>
+				</div>
+
+
 			</div>
 		</div>
-		
+
 	</div>
 
 </div>

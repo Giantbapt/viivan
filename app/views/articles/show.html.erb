@@ -1,29 +1,46 @@
+<% content_for :meta_title, "#{@article.meta_title}" %>
+<% content_for :meta_description, "#{@article.meta_description}" %>
+<% content_for :meta_image, "#{@article.meta_image}" %>
+
 <div class="banner-show">
 	<%= image_tag(@article.photo, class: 'image-article-show') %>
 	<h1 class="text-center"><%= @article.title %></h1>
 	<div class="container col-md-10">
-		<% @jon = @article.text.html_safe %>
-		<%= @jon%>
-		<div class="author-show">
-			<% if @article.author == "Baptiste Chebassier"  %>
+    <div class="article-text">
+  		<% @jon = @article.text.html_safe %>
+  		<%= @jon%>
+
+    </div>
+    <div class="row">
+      <div class="btn-wrapper col-6">
+        <%= link_to "Tous les articles", articles_path, class: 'btn-blue' %>
+      </div>
+      <div class="btn-wrapper col-6">
+        <%= link_to "Article suivant", article_path(params[:id]), class: 'btn-blue' %>
+      </div>
+
+    </div>
+
+		<!-- <div class="author-show">
+			<#% if @article.author == "Baptiste Chebassier"  %>
 				 <div class="d-flex flex-row-reverse">
-					 <p>Baptiste Chebassier</p>	
-					 <%= image_tag('Bapt.png', :class => 'avatar avatar-16 img-circle') %>
-				 	
+					 <p>Baptiste Chebassier</p>
+					 <%#= image_tag('Bapt.png', :class => 'avatar avatar-16 img-circle') %>
+
 				 </div>
-			<% elsif @article.author == "Jeanne Rassart"%>
+			<% #elsif @article.author == "Jeanne Rassart"%>
 				<div class="d-flex flex-row-reverse">
-					 <%= image_tag('jeanne.png', :class => 'avatar avatar-16 img-circle') %>
+					 <%#= image_tag('jeanne.png', :class => 'avatar avatar-16 img-circle') %>
 					<p>Jeanne Rassart</p>
 				</div>
-				<% elsif @article.author == "Jeanne Rassart et Baptiste Chebassier"%>
+				<%# elsif @article.author == "Jeanne Rassart et Baptiste Chebassier"%>
 				<div class="d-flex flex-row-reverse">
 					<p>Jeanne Rassart et Baptiste Chebassier</p>
-				 	<%= image_tag('jeanne.png', :class => 'avatar avatar-16 img-circle') %>
-				 	<%= image_tag('Bapt.png', :class => 'avatar avatar-16 img-circle') %>
+				 	<%#= image_tag('jeanne.png', :class => 'avatar avatar-16 img-circle') %>
+				 	<%#= image_tag('Bapt.png', :class => 'avatar avatar-16 img-circle') %>
 				</div>
-			<% end%>
-			
-		</div>
-	</div>	
+			<#% end%>
+
+		</div> -->
+	</div>
 </div>

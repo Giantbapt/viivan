@@ -8,12 +8,13 @@ class SuggestionsController < ApplicationController
   def create
   	@suggestion = Suggestion.new(suggestion_params)
     if @suggestion.save
-      redirect_to root_path(anchor: "suggestions")
-    else 
+      redirect_to root_path(anchor: "suggestions"), notice:"Nous avons bien reçu votre suggestion, merci pour votre aide !"
+
+    else
       render :new
     end
     # respond_to do |format|
-    #   format.js { flash[:notice] = "Created order" } 
+    #   format.js { flash[:notice] = "Created order" }
     # end
 
   end
