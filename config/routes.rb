@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get '/404', to: "errors#not_found"
   get '/422', to: "errors#unacceptable"
   get '/500', to: "errors#internal_error"
-  resources :articles, only: [:new,:index, :show]
+  resources :articles, only: [:new,:index, :edit, :update, :show]
   resources :galeries, only: [:index, :show]
   # get 'articles/new'
   post 'articles/create'

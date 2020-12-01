@@ -73,11 +73,11 @@
 				<%= link_to(article_path(article), class: 'article') do |f| %>
 
 					<div class="content-photo">
-						<%= image_tag("depart_van.jpg", :class => "photo-article") %>
+						<%= image_tag(article.photo, :class => "photo-article") %>
 					</div>
 					<div class="article-titre">
 						<h2><span>	<%= article.title %></span></h2>
-						<p><%= article.meta_description %> </p>
+						<!-- <p><#%= article.meta_description %> </p> -->
 					</div>
 
 					<% end %>
@@ -131,7 +131,7 @@ Partir à l’aventure avec le <strong>beau Baptiste</strong>, c’est pratique 
 						<%= cl_image_tag("Viivan/image-removebg-preview_22.png") %>
 					</div>
 					<h4>Elvis</h4>
-					<p>30 ans, 240 000kms, moteur diesel, 3t5, 4m de long et 2,8m de haut ! J'ai beaucoup de chance d'être piloté par Céline et Baptiste qui prennent bien soin de moi et me font voir les plus beaux paysages ! Depuis que je suis avec eux j'ai été rénové, repeint, briqué on a changé ma courroie, <strong>bref je suis chouchouté quelle chance !</strong></p>
+					<p>C25, 30 ans, 240 000kms, moteur diesel, 3t5, 4m de long et 2,8m de haut ! J'ai beaucoup de chance d'être piloté par Céline et Baptiste qui prennent bien soin de moi et me font voir les plus beaux paysages ! Depuis que je suis avec eux j'ai été rénové, repeint, briqué on a changé ma courroie, <strong>bref je suis chouchouté quelle chance !</strong></p>
 				</div>
 
 

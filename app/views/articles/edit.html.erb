@@ -1,0 +1,30 @@
+<div class="banner-articles-index">
+  <div class="container">
+    <%= simple_form_for @article do |f| %>
+          <div class="form-inputs">
+          <h2>Remplis ici ton article</h2>
+          <%= f.input :title, required: true, placeholder: 'Titre de l\'article', label: false%>
+          <%= f.input :date, required: true, placeholder: 'Date', label: false %>
+          <br>
+          <%= f.input :address, required: true, placeholder: 'Adresse', label: false%>
+          <%= f.input :duration, required: true, placeholder: 'Temps de lecture', label: false  %>
+          <%= f.input :photo, required: true, placeholder: 'Photo', label: false  %>
+          <%= f.input :text, required: true, placeholder: 'Texte', label: false  %>
+          <%= f.input :author, :as => :select, :prompt => 'Auteur', collection: ['Céline Devinoy', 'Baptiste Chebassier', 'Céline Devinoy et Baptiste Chebassier', 'Autre'], label: false %><br>
+          <h3>Meta-Informations (propre à chaque article)</h3>
+          <%= f.label :slug,'Slug (c\'est la partie url après le  en général c\'est mieux d\'avoir le nom de l\'article (il ne faut pas d\'accents non plus ou d\'espace)'  %>
+           <%= f.input :slug, required: true, placeholder: 'Slug', label: false  %>
+          <%= f.input :meta_title, required: true, placeholder: 'Meta-title', label: false  %>
+          <%= f.input :meta_description, required: true, placeholder: 'Meta-description', label: false  %>
+          <%= f.input :meta_image, required: true, placeholder: 'Idéalement mettre l\'url de l\'image cloudinary', label: false  %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Valider l'article", class: "btn btn-primary full-width" %>
+        </div>
+
+    <% end %>
+
+  </div>
+
+</div>

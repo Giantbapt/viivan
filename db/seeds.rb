@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+    Galerie.destroy_all
   		results = Cloudinary::Api.resources_by_tag("Viivan", max_results: 100)
   		jon = results.first[1]
   		jon.each do |image|
