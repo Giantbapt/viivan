@@ -84,7 +84,9 @@
 .image-in-show {
 	width: 70vw;
 }
-
+#article_text {
+	height: 300px;
+}
 @media (max-width: 500px) {
 	.articles {
 		grid-template-columns: 1fr;
