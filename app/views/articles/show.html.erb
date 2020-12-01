@@ -1,5 +1,6 @@
-<% content_for :meta_title, "#{@article.meta_title}" %>
-<% content_for :meta_description, "#{@article.meta_description}" %>
+<% @jon = @article.meta_title %>
+<% content_for :meta_title, @jon %>
+<% content_for :meta_description, @article.meta_description %>
 <% content_for :meta_image, "#{@article.meta_image}" %>
 
 <div class="banner-show">
@@ -16,7 +17,9 @@
         <%= link_to "Tous les articles", articles_path, class: 'btn-blue' %>
       </div>
       <div class="btn-wrapper col-6">
-        <%= link_to "Article suivant", article_path(params[:id]), class: 'btn-blue' %>
+        <% if @article.id < Article.last.id %>
+           <%= link_to "Article suivant", article_path(params[:id].to_i + 1), class: 'btn-blue' %>
+        <% end %>
       </div>
 
     </div>

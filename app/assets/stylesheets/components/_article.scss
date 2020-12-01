@@ -77,6 +77,14 @@
     object-fit: cover;
 }
 
+.image-in-wrapper {
+	display: flex;
+	justify-content: center
+}
+.image-in-show {
+	width: 70vw;
+}
+
 @media (max-width: 500px) {
 	.articles {
 		grid-template-columns: 1fr;
