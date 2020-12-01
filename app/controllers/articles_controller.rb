@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   def create
   	@article = Article.new(article_params)
     @article.save!
-    redirect_to root_path, notice:"Nous avons bien reçu votre suggestion, merci pour votre aide !"
+    redirect_to articles_path, notice:"Nouvel Article ajouté, bien ouej!"
   end
 
   def index

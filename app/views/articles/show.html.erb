@@ -4,9 +4,10 @@
 <% content_for :meta_image, "#{@article.meta_image}" %>
 
 <div class="banner-show">
+
 	<%= image_tag(@article.photo, class: 'image-article-show') %>
 	<h1 class="text-center"><%= @article.title %></h1>
-	<div class="container col-md-10">
+	<div class="container col-md-8">
     <div class="article-text">
   		<% @jon = @article.text.html_safe %>
   		<%= @jon%>

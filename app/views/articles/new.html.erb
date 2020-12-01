@@ -12,6 +12,11 @@
 			    <%= f.input :text, required: true, placeholder: 'Texte', label: false  %>
 			    <%= f.input :author, :as => :select, :prompt => 'Auteur', collection: ['Céline Devinoy', 'Baptiste Chebassier', 'Céline Devinoy et Baptiste Chebassier', 'Autre'], label: false %><br>
 			  	<h3>Meta-Informations (propre à chaque article)</h3>
+			    <%= f.label :slug,'Slug (c\'est la partie url après le  en général c\'est mieux d\'avoir le nom de l\'article (il ne faut pas d\'accents non plus ou d\'espace)'  %>
+			     <%= f.input :slug, required: true, placeholder: 'Slug', label: false  %>
+			    <%= f.input :meta_title, required: true, placeholder: 'Meta-title', label: false  %>
+			    <%= f.input :meta_description, required: true, placeholder: 'Meta-description', label: false  %>
+			    <%= f.input :meta_image, required: true, placeholder: 'Idéalement mettre l\'url de l\'image cloudinary', label: false  %>
 			  </div>
 
 			  <div class="form-actions">

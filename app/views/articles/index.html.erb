@@ -4,27 +4,27 @@
 <div class="banner-articles-index">
 		<h1 class="text-center"><span>L'histoire de notre voyage !</span></h1>
 	<div class="container col-md-10">
-		<p>On vous détaille dans chaque article nos aventures, nos émotions, notre ressenti, les petites histoires et anecdotes croustillantes qui constituent notre voyage.</p> 
+		<p>On vous détaille dans chaque article nos aventures, nos émotions, notre ressenti, les petites histoires et anecdotes croustillantes qui constituent notre voyage.</p>
 		<div class="articles">
 			<% @articles.each do |article| %>
-				<%= link_to(article_path(article), class: 'article') do |f| %> 
-				
+				<%= link_to(article_path(article), class: 'article') do |f| %>
+
 					<div class="content-photo">
-						<%= image_tag("depart_van.jpg", :class => "photo-article") %>
+						<%= image_tag(article.photo, :class => "photo-article") %>
 					</div>
 					<div class="article-titre">
 						<h2><span>	<%= article.title %></span></h2>
-						<p><%= article.meta_description %> </p>
+						<!-- <p><#%= article.meta_description %> </p> -->
 					</div>
 					<!-- <div class="card-element row" >
 						<p style="color: black"><%=article.duration%></p>
 						<p style="color: black"><%=article.date%></p>
 					</div> -->
-				
+
 				<%end%>
 			<%end%>
-		</div>	
+		</div>
 	</div>
 
-	
+
 </div>
