@@ -58,6 +58,10 @@
 }
 .article-text {
 	color: $blue;
+	font-size: 18px;
+	p {
+
+	}
 	li {
 		font-size: 18px;
 	}
@@ -82,11 +86,17 @@
 	justify-content: center
 }
 .image-in-show {
-	width: 70vw;
+	width: 50vw;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 #article_text {
 	height: 300px;
 }
+.article-text {
+	text-align: justify;
+}
+
 @media (max-width: 500px) {
 	.articles {
 		grid-template-columns: 1fr;
