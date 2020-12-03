@@ -2,9 +2,14 @@
 .dashboard-suggestions {
 	background-color: $yellow;
 	padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .dash-suggestion {
+  border: 1px solid #090935;
+    box-shadow: 6px 6px rgba(9, 9, 53, 0.25);
+
 	background-color: white;
     border-radius: 4px;
     padding: 15px;
