@@ -32,7 +32,10 @@ h1 {
 // 	visibility: hidden;
 // 	height: 0px;
 // }
-
+.video {
+      display: flex;
+    justify-content: center;
+}
 
 .suivez-nous {
 	margin-top: 60px;
@@ -47,7 +50,7 @@ h1 {
 		text-align: justify;
 		padding-top: 160px;
 
-		
+
 }
 
 .suggestions {
@@ -97,7 +100,7 @@ h1, h3 {
 	}
 	p {
 		text-align: justify;
-	
+
 	}
 }
 
@@ -180,7 +183,7 @@ h1, h3 {
 	p {
 		font-size: 15px;
 	}
-   
+
  }
 @media (min-width: 998px) and (max-width: 1200px) {
 		#banner {
@@ -190,7 +193,7 @@ h1, h3 {
 		height: 500px;
 		width: 500px;
 	}
-	    
+
 }
 
 @media (min-width: 1200px) {
