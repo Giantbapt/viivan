@@ -5,7 +5,9 @@
 
 <div class="banner-show">
 
-	<%= image_tag(@article.photo, class: 'image-article-show') %>
+	<%#= image_tag(@article.photo, class: 'image-article-show') %>
+  <%= cl_image_tag(@article.photo,
+    :transformation=>[{:raw_transformation=> "w_1000"}], class: "image-article-show")%>
 	<h1 class="text-center"><%= @article.title %></h1>
 	<div class="container col-md-8">
     <div class="article-text">

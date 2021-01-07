@@ -20,7 +20,8 @@
 	        Avancer, découvrir, s'émerveiller, rencontrer, apprendre, c'est ce que l'on s'apprête à vivre durant les prochains mois avec Elvis !
 		</div>
 		<div class="video">
-      <iframe src="https://player.vimeo.com/video/488969365" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+      <iframe src="https://player.vimeo.com/video/496461491" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 		</div>
 		<div class="suivez-nous" id="suivez-nous">
 			<h3><span>Suivez-nous !</span></h3>
@@ -76,7 +77,9 @@
 				<%= link_to(article_path(article), class: 'article') do |f| %>
 
 					<div class="content-photo">
-						<%= image_tag(article.photo, :class => "photo-article") %>
+						<%#= image_tag(article.photo, :class => "photo-article") %>
+            <%= cl_image_tag(article.photo,
+    :transformation=>[{:raw_transformation=> "w_300"}], class: "photo-article")%>
 					</div>
 					<div class="article-titre">
 						<h2><span>	<%= article.title %></span></h2>
@@ -95,11 +98,13 @@
 			<div class="grid">
 				<% @last_images.each do |image| %>
 
-					<%= link_to galery_path(image) do %>
-						<%= image_tag(image["url"], class: "image-galerie") %>
+          <%= link_to galery_path(image) do %>
+            <%= cl_image_tag(image["nom"],
+    :transformation=>[{:raw_transformation=> "w_400"}])%>
 
-					<%end%>
+          <%end%>
 				<% end %>
+
 			</div>
 			<div class="btn-wrapper">
 				<%= link_to "Voir toutes les photos", galeries_url, class:('btn-blue') %>
@@ -115,14 +120,14 @@
 				<div class="baptiste member col-md-6">
 					<div class="image-team">
 
-						<%= cl_image_tag("Viivan/BaptFichier_10.png") %>
+						<%= cl_image_tag("Viivan/BaptFichier_10.png",:transformation=>[{:raw_transformation=> "w_300"}]) %>
 					</div>
 					<h4>Baptiste Chebassier</h4>
 					<p>Je suis un doux rêveur, qui a des milliers de projets (dans ma tête) et j'essaye d'en concrétiser quelques uns. Malgré que je dois toujours avoir un avis différent, je suis toujours partant pour apprendre le plus possible et partir à l'aventure ! J'ai d'autant plus la chance de partager celle-ci avec la merveilleuse <strong>❤ Céline ❤ </strong>. <br> Je suis de plus en plus persuadé qu'il faut faire ce qu'on veut faire quand on veut le faire et ne pas chercher plus compliqué ! <br>Une citation ? <br><strong>"On ne repousse pas ses limites, on les découvre"</strong>, <i>Jean-Louis Etienne</i> </p>
 				</div>
 				<div class="celine member col-md-6">
 					<div class="image-team">
-						<%= cl_image_tag("Viivan/image-removebg-preview_21.png") %>
+						<%= cl_image_tag("Viivan/image-removebg-preview_21.png",:transformation=>[{:raw_transformation=> "w_300"}]) %>
 					</div>
 					<h4>Céline Devinoy</h4>
 					<p>J'ai pas l’air comme ça, mais je suis de nature enthousiaste, surtout quand il s’agit de partir en voyage et de produire tout effort physique imaginable, tout en apprenant et en rencontrant.
@@ -131,7 +136,7 @@ Partir à l’aventure avec le <strong>beau Baptiste</strong>, c’est pratique 
 				</div>
 				<div class="elvis member offset-md-3 col-md-6">
 					<div class="image-team">
-						<%= cl_image_tag("Viivan/image-removebg-preview_22.png") %>
+						<%= cl_image_tag("Viivan/image-removebg-preview_22.png",:transformation=>[{:raw_transformation=> "w_300"}]) %>
 					</div>
 					<h4>Elvis</h4>
 					<p>C25, 30 ans, 240 000kms, moteur diesel, 3t5, 4m de long et 2,8m de haut ! J'ai beaucoup de chance d'être piloté par Céline et Baptiste qui prennent bien soin de moi et me font voir les plus beaux paysages ! Depuis que je suis avec eux j'ai été rénové, repeint, briqué on a changé ma courroie, <strong>bref je suis chouchouté quelle chance !</strong></p>

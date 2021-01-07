@@ -10,7 +10,9 @@
 			<%= link_to "", galeries_path %>
 		</div>
 		<div class="image">
-			<%= image_tag(@galerie[:url], class: "image-show") %>
+			<%#= image_tag(@galerie[:url], class: "image-show") %>
+      <%= cl_image_tag(@galerie["nom"],
+    :transformation=>[{:raw_transformation=> "w_1000"}], class: "image-show")%>
 		</div>
 			<!-- <div class="infos-show">
 

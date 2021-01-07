@@ -2,7 +2,7 @@
 	<%= link_to root_path, class: "logo" do %>
     	<%= image_tag("viivan.gif", :class => "viivan-gif-navbar") %>
   	<% end %>
-	
+
 
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"><svg class="bi bi-list" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -21,10 +21,11 @@
 			<!-- <div class="nav-item"><a href="#demarche"> La démarche</a></div> -->
 			<%= link_to "Suivez-nous !", root_path(anchor: 'suivez-nous'), class: 'nav-item' %>
 			<%= link_to "Vos suggestions", root_path(anchor: 'suggestions'), class: 'nav-item'  %>
-			<%= link_to "Galerie", galeries_path , class: 'nav-item' %>
+      <%= link_to "Galerie", galeries_path , class: 'nav-item' %>
+			<%= link_to "Videos", videos_path , class: 'nav-item' %>
 			<%= link_to "Nos petites histoires", articles_path, class: 'nav-item'%>
 
 			<!-- <div class="nav-item"><a href="#team">L'équipe</a></div> -->
 		</ul>
 	</div>
-</div>	
+</div>

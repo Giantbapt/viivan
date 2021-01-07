@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'pages#dashboard', as: :dashboard
   get 'galerie', to: 'pages#galerie', as: :galerie
+  get 'videos', to: 'pages#videos', as: :videos
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
