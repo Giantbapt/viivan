@@ -4,7 +4,7 @@
 		<%= image_tag("viivan.gif", :class => "viivan-gif", :id => 'viivan-gif') %>
 	</div>
 
-	<div class="container" id="container">
+	<div class="container col-md-8" id="container">
 
 		<div class="titre justify-center">
 			<h1><span>SUR LA ROUTE</span></h1>
@@ -99,11 +99,11 @@
 				<% @last_images.each do |image| %>
 
           <%= link_to galery_path(image) do %>
-            <%= cl_image_tag(image["nom"],
-    :transformation=>[{:raw_transformation=> "w_400"}])%>
+            <%= cl_image_tag(image["nom"], :transformation=>[{:raw_transformation=> "w_400"}])%>
 
           <%end%>
 				<% end %>
+
 
 			</div>
 			<div class="btn-wrapper">

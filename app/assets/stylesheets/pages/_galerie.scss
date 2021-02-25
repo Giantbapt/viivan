@@ -1,6 +1,9 @@
 .grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  img {
+    max-width: 100%;
+  }
 }
 .image-galerie {
 	max-width: 100%
@@ -95,6 +98,9 @@
 		  img {
 		    width: 40px;
 		  }
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
 
 }
@@ -144,6 +150,9 @@
 		    width: 45px;
 		  }
 		}
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -191,6 +200,9 @@
 		    width: 50px;
 		  }
 		}
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .titre{
