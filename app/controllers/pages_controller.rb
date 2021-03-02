@@ -3,8 +3,8 @@ class PagesController < ApplicationController
 
   def home
   	    @suggestion = Suggestion.new
-        @last_images = Galerie.last(3)
-        @last_articles = Article.last(3)
+        @last_images = Galerie.last(3).reverse()
+        @last_articles = Article.last(3).reverse()
 
   end
 

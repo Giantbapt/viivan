@@ -96,7 +96,26 @@
 }
 .article-text {
 	text-align: justify;
+    .pink{
+    color: pink;
+  }
+  .blue{
+    color: rgb(21, 96, 189);
+  }
+  .green{
+    color: green;
+  }
+  .red{
+    color: red;
+  }
+  .purple{
+    color: purple;
+  }
+  .orange{
+    color: orange;
+  }
 }
+
 
 @media (max-width: 500px) {
 	.articles {
