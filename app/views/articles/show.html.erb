@@ -15,6 +15,39 @@
   		<%= @jon%>
 
     </div>
+
+		<div class="author-show">
+			<% if @article.author == "Baptiste Chebassier"  %>
+				 <div class="d-flex flex-row-reverse">
+          <div>
+             <%= cl_image_tag("Viivan/BaptFichier_10.png",:transformation=>[{:raw_transformation=> "w_300"}], :class => 'avatar-article') %>
+  					 <p>Baptiste Chebassier</p>
+
+          </div>
+
+				 </div>
+			<% elsif @article.author == "Céline Devinoy"%>
+				<div class="d-flex flex-row-reverse">
+          <div>
+  					 <%= cl_image_tag("Viivan/image-removebg-preview_21.png",:transformation=>[{:raw_transformation=> "w_300"}], :class => 'avatar-article' ) %>
+  					<p>Céline Devinoy</p>
+
+          </div>
+				</div>
+				<% elsif @article.author == "Céline Devinoy et Baptiste Chebassier"%>
+				<div class="d-flex flex-row-reverse">
+          <div>
+            <div>
+    				 	<%= cl_image_tag("Viivan/image-removebg-preview_21.png",:transformation=>[{:raw_transformation=> "w_300"}], :class => 'avatar-article') %>
+    				 	<%= cl_image_tag("Viivan/BaptFichier_10.png",:transformation=>[{:raw_transformation=> "w_300"}], :class => 'avatar-article') %>
+
+            </div>
+  					<p>Céline Devinoy et Baptiste Chebassier</p>
+
+          </div>
+				</div>
+			<% end%>
+
     <div class="row">
       <div class="btn-wrapper col-6">
         <%= link_to "Tous les articles", articles_path, class: 'btn-blue' %>
@@ -26,27 +59,6 @@
       </div>
 
     </div>
-
-		<!-- <div class="author-show">
-			<#% if @article.author == "Baptiste Chebassier"  %>
-				 <div class="d-flex flex-row-reverse">
-					 <p>Baptiste Chebassier</p>
-					 <%#= image_tag('Bapt.png', :class => 'avatar avatar-16 img-circle') %>
-
-				 </div>
-			<% #elsif @article.author == "Jeanne Rassart"%>
-				<div class="d-flex flex-row-reverse">
-					 <%#= image_tag('jeanne.png', :class => 'avatar avatar-16 img-circle') %>
-					<p>Jeanne Rassart</p>
-				</div>
-				<%# elsif @article.author == "Jeanne Rassart et Baptiste Chebassier"%>
-				<div class="d-flex flex-row-reverse">
-					<p>Jeanne Rassart et Baptiste Chebassier</p>
-				 	<%#= image_tag('jeanne.png', :class => 'avatar avatar-16 img-circle') %>
-				 	<%#= image_tag('Bapt.png', :class => 'avatar avatar-16 img-circle') %>
-				</div>
-			<#% end%>
-
-		</div> -->
+		</div>
 	</div>
 </div>
