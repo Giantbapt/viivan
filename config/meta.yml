@@ -1,7 +1,7 @@
 # config/meta.yml
 
 meta_product_name: "Viivan"
-meta_title: "Viivan, par Céline et Baptiste"
+meta_title: "Viivan, le voyage de Céline Devinoy et Baptiste Chebassier"
 meta_description: "Suivez le voyage de Céline Devinoy et Baptiste Chebassier à travers la France. À bord de leur van Elvis et accompagnés de leurs poules Michèle et Jeannine pour redécouvrir notre beau pays !"
 meta_image: "viivan.gif" # should exist in `app/assets/images/`
 twitter_account: ""   # required for Twitter Cards

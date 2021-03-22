@@ -39,7 +39,8 @@
           <div>
             <div>
     				 	<%= cl_image_tag("Viivan/image-removebg-preview_21.png",:transformation=>[{:raw_transformation=> "w_300"}], :class => 'avatar-article') %>
-    				 	<%= cl_image_tag("Viivan/BaptFichier_10.png",:transformation=>[{:raw_transformation=> "w_300"}], :class => 'avatar-article') %>
+
+              <%= cl_image_tag("Viivan/BaptFichier_10.png", :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:ffffff", :gravity=>"auto", :radius=>"max", :width=>1000, :crop=>"fill", :transformation=>[{:raw_transformation=> "w_300"}], :class => 'avatar-article')  %>
 
             </div>
   					<p>Céline Devinoy et Baptiste Chebassier</p>
