@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all.reverse()
+    @articles = Article.all.sort_by{|e| e[:time_ago]}.reverse()
   end
 
   def show
