@@ -33,4 +33,3 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 import "../components/navbar";
-import "../components/counterEgg";
