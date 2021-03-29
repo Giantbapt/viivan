@@ -1,0 +1,2 @@
+class Oeuf < ApplicationRecord
+end

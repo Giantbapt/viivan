@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :galeries, only: [:index, :show]
   # get 'articles/new'
   post 'articles/create'
+
+  post 'oeufs/create'
   # get 'articles/index'
   # get 'articles/show'
   get 'suggestions/new'

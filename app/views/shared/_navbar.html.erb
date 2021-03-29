@@ -2,6 +2,13 @@
 	<%= link_to root_path, class: "logo" do %>
     	<%= image_tag("viivan.gif", :class => "viivan-gif-navbar") %>
   	<% end %>
+      <div class="d-flex">
+        <div class="compteur">
+          <img class="oeuf-image" src="https://visuels.l214.com/animaux/poules/oeufs/oeuf-detoure.png" alt="">
+          <p> <%= Oeuf.count %> oeufs</p>
+        </div>
+
+      </div>
 
 
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,6 +26,7 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav">
 			<!-- <div class="nav-item"><a href="#demarche"> La démarche</a></div> -->
+
 			<%= link_to "Suivez-nous !", root_path(anchor: 'suivez-nous'), class: 'nav-item' %>
 			<%= link_to "Vos suggestions", root_path(anchor: 'suggestions'), class: 'nav-item'  %>
       <%= link_to "Galerie", galeries_path , class: 'nav-item' %>

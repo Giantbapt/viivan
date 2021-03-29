@@ -13,5 +13,10 @@ function scrollFunction() {
 
     // document.getElementById("viivan-gif").style.height = "0px";
     // document.getElementById("container").style.paddingTop = "90px";
-  } 
+  }
+}
+
+function counter() {
+  document.ad
+  onc
 }

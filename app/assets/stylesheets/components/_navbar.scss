@@ -5,7 +5,7 @@
   width: 100%;
   top: 0; /* At the top */
   padding:5px;
-  
+
   top: 0px;
   // position: sticky !important;
   box-shadow: 0 1px rgba(9, 9, 53, 0.25);
@@ -61,8 +61,15 @@
 .navbar-collapse {
 	justify-content: flex-end;
 }
-
-
+.oeuf-image {
+  height: 30px;
+}
+.compteur {
+  font-family: "Luckiest guy";
+  text-align: center;
+  margin-top: 16px;
+  margin-left: 10px;
+}
 
 
 @media (max-width: 500px) {
@@ -80,11 +87,11 @@
 
 @media (min-width: 768px) and (max-width: 998px) {
 
-   
+
  }
 @media (min-width: 998px) and (max-width: 1200px) {
 
-    
+
 }
 
 @media (min-width: 1200px) {

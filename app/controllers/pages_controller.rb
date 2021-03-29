@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   	    @suggestion = Suggestion.new
         @last_images = Galerie.last(3).reverse()
         @last_articles = Article.last(3).reverse()
+        @oeuf = Oeuf.new
 
   end
 
@@ -18,6 +19,7 @@ class PagesController < ApplicationController
   def dashboard
   	@suggestions = Suggestion.all
   	@articles = Article.all
+    @oeuf = Oeuf.new(count: "blabla")
   end
 
   def videos
