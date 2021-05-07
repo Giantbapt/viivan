@@ -1,0 +1,7 @@
+<% galeries.each do |image| %>
+  <%= link_to galery_path(image) do %>
+          <%#= image_tag(image["url"], class: "image-galerie") %>
+          <%= cl_image_tag(image["nom"],
+    :transformation=>[{:raw_transformation=> "w_300"}], class: "image-galerie")%>
+
+<% end %>

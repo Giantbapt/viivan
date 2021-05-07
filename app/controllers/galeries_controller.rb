@@ -1,7 +1,11 @@
 class GaleriesController < ApplicationController
 	skip_before_action :authenticate_user!
 	def index
-		@galeries = Galerie.all
+    if params[:galeries].present?
+      @galeries = Galerie.search_by_tags(params[:galeries])
+    else
+		  @galeries = Galerie.all
+    end
 	end
 
 	def show

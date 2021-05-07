@@ -1,15 +1,22 @@
 <div class="banner-galerie">
 	<div class="container">
+    <div class="grid d-flex justify-center">
+      <!-- <div class="buttons">
+        <ul class="btn btn-danger click-me" >Michelle</ul>
+      </div> -->
+      <%= form_tag galeries_path, method: :get, class: "galerie-form" do %>
+         <h3>Que voulez-vous voir ? </h3>
+         <br>
+
+          <%= select_tag :galeries, options_for_select(["Viivan", "Bapt&Céline", "Elvis", "landscape", "Michèle&Jeanine", "work&move"], params[:galeries]), id: "different_option_value_html", onchange: "this.form.submit();", class: "galerie-select" %>
+
+      <%end%>
+    </div>
+
 		<div class="grid">
 
-<!-- 			<#% @cloudinary_viivan_images.each do |image| %>
-				<#%= link_to image["url"] do %>
-					<#%= image_tag(image["url"], class: "image-galerie") %>
-
-				<#%end%>
-			<#%	end %> -->
 		<% jon = Galerie.all %>
-		<% jon.each do |image| %>
+		<% @galeries.each do |image| %>
 			<%= link_to galery_path(image) do %>
 					<%#= image_tag(image["url"], class: "image-galerie") %>
           <%= cl_image_tag(image["nom"],
@@ -18,8 +25,15 @@
 
 				<%end%>
 		<% end %>
-
+    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+    <label class="btn btn-primary" for="btn-check">Single toggle</label>
 		</div>
+<!-- 			<#% @cloudinary_viivan_images.each do |image| %>
+				<#%= link_to image["url"] do %>
+					<#%= image_tag(image["url"], class: "image-galerie") %>
+
+				<#%end%>
+			<#%	end %> -->
 
 	</div>
 

@@ -6,14 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
     Galerie.destroy_all
-  		results = Cloudinary::Api.resources_by_tag("Viivan", max_results: 300)
+  		results = Cloudinary::Api.resources_by_tag("Viivan", tags: true, max_results: 300)
   		jon = results.first[1]
   		jon.each do |image|
-			beach = Galerie.new(nom: image['public_id'], url: image['url'])
+			beach = Galerie.new(nom: image['public_id'], url: image['url'], tags: image['tags'])
 			beach.save!
 
 		end
 
+    # love = Cloudinary::Api.resources_by_tag("Elvis", tags: true, max_results: 1)
+    #  jon = love.first[1]
+    #   jon.each do |image|
+    #   beach = Galerie.new(nom: image['public_id'], url: image['url'], tags: image['tags'])
+    #   beach.save!
+    # end
     #   results = Cloudinary::Api.resources_by_tag("Viivan", max_results: 30)
     #   gallerie = Galerie.all
     #   jon = results.first[1]
