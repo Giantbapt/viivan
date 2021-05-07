@@ -14,8 +14,6 @@
     </div>
 
 		<div class="grid">
-
-		<% jon = Galerie.all %>
 		<% @galeries.each do |image| %>
 			<%= link_to galery_path(image) do %>
 					<%#= image_tag(image["url"], class: "image-galerie") %>
@@ -25,8 +23,6 @@
 
 				<%end%>
 		<% end %>
-    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-    <label class="btn btn-primary" for="btn-check">Single toggle</label>
 		</div>
 <!-- 			<#% @cloudinary_viivan_images.each do |image| %>
 				<#%= link_to image["url"] do %>
