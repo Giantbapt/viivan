@@ -1,0 +1,17 @@
+<div class="wrapper-videos">
+  <div class="container">
+    <h1>Nos vidéos du voyage !</h1>
+    <div class="videos">
+      <% @videos.each do |video| %>
+        <div class="video">
+          <iframe src="<%=video.url%>" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+</div>
+

@@ -22,6 +22,4 @@ class PagesController < ApplicationController
     @oeuf = Oeuf.new(count: "blabla")
   end
 
-  def videos
-  end
 end

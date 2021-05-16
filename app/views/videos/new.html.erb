@@ -1,0 +1,25 @@
+<div class="banner-articles-index">
+  <div class="container">
+    <%= simple_form_for @video, url: videos_create_path do |f| %>
+          <div class="form-inputs">
+          <h2>Remplis ici ta vidéo</h2>
+          <%= f.input :titre, required: true, placeholder: 'Titre de la vidéo', label: false%>
+
+          <%= f.input :url, required: true, placeholder: 'Url', label: false%>
+          <h3>Meta-Informations (propre à chaque video)</h3>
+          <%= f.label :slug,'Slug (c\'est la partie url après le  en général c\'est mieux d\'avoir le nom de l\'video (il ne faut pas d\'accents non plus ou d\'espace)'  %>
+           <%= f.input :slug, placeholder: 'Slug', label: false  %>
+          <%= f.input :meta_title, placeholder: 'Meta-title', label: false  %>
+          <%= f.input :meta_description, placeholder: 'Meta-description', label: false  %>
+          <%= f.input :meta_image, placeholder: 'Idéalement mettre limage de la video', label: false  %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Valider la video", class: "btn btn-primary full-width" %>
+        </div>
+
+    <% end %>
+
+  </div>
+
+</div>
