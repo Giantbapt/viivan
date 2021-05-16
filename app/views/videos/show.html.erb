@@ -1,4 +1,10 @@
+<% @jon = @video.meta_title %>
+<% content_for :meta_title, @jon %>
+<% content_for :meta_description, @video.meta_description %>
+<% content_for :meta_image, "#{@video.meta_image}" %>
+
 <div class="wrapper-videos">
+
   <div class="container">
     <h1><%= @video.titre %></h1>
     <div class="videos">
