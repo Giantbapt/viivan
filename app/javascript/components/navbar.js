@@ -15,8 +15,3 @@ function scrollFunction() {
     // document.getElementById("container").style.paddingTop = "90px";
   }
 }
-
-function counter() {
-  document.ad
-  onc
-}
